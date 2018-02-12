@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/3-Server/!svn/ver/5518/dev/common/common-event/src/main/java/com/my9yu/common/event/config
+END
+EventReceiverBeanPostProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/3-Server/!svn/ver/5518/dev/common/common-event/src/main/java/com/my9yu/common/event/config/EventReceiverBeanPostProcessor.java
+END
+event-1.0.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/3-Server/!svn/ver/4827/dev/common/common-event/src/main/java/com/my9yu/common/event/config/event-1.0.xsd
+END
+EventNamespaceHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/3-Server/!svn/ver/7/dev/common/common-event/src/main/java/com/my9yu/common/event/config/EventNamespaceHandler.java
+END
+EventBeanDefinitionParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/3-Server/!svn/ver/7/dev/common/common-event/src/main/java/com/my9yu/common/event/config/EventBeanDefinitionParser.java
+END

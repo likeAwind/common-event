@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/3-Server/!svn/ver/7/dev/common/common-event/src/main/java/META-INF
+END
+spring.handlers
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/3-Server/!svn/ver/7/dev/common/common-event/src/main/java/META-INF/spring.handlers
+END
+spring.schemas
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/3-Server/!svn/ver/7/dev/common/common-event/src/main/java/META-INF/spring.schemas
+END
+MANIFEST.MF
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/3-Server/!svn/ver/7/dev/common/common-event/src/main/java/META-INF/MANIFEST.MF
+END

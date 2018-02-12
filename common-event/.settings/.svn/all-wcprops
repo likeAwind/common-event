@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/3-Server/!svn/ver/7/dev/common/common-event/.settings
+END
+org.eclipse.jdt.core.prefs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/3-Server/!svn/ver/7/dev/common/common-event/.settings/org.eclipse.jdt.core.prefs
+END
+org.eclipse.core.resources.prefs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/3-Server/!svn/ver/7/dev/common/common-event/.settings/org.eclipse.core.resources.prefs
+END
+org.maven.ide.eclipse.prefs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/3-Server/!svn/ver/7/dev/common/common-event/.settings/org.maven.ide.eclipse.prefs
+END

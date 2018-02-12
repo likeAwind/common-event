@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/3-Server/!svn/ver/7/dev/common/common-event
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/3-Server/!svn/ver/7/dev/common/common-event/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/3-Server/!svn/ver/7/dev/common/common-event/.project
+END
+pom.xml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/3-Server/!svn/ver/5517/dev/common/common-event/pom.xml
+END
