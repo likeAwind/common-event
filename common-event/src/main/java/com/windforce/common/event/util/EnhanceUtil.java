@@ -60,7 +60,7 @@ public final class EnhanceUtil {
 
 		sb = new StringBuilder();
 		sb.append("{");
-		sb.append("com.my9yu.common.event.core.IReceiverInvoke other = (com.my9yu.common.event.core.IReceiverInvoke) $1;");
+		sb.append("com.windforce.common.event.core.IReceiverInvoke other = (com.windforce.common.event.core.IReceiverInvoke) $1;");
 		sb.append("return bean.equals(other.getBean());");
 		sb.append("}");
 		ectMethod.setBody(sb.toString());

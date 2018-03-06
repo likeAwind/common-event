@@ -5,8 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,14 +12,12 @@ import org.slf4j.LoggerFactory;
 import com.windforce.common.event.anno.ReceiverAnno;
 import com.windforce.common.event.event.IEvent;
 import com.windforce.common.event.util.EnhanceUtil;
+import com.windforce.common.threadpool.AbstractDispatcherHashCodeRunable;
+import com.windforce.common.threadpool.IdentityEventExecutorGroup;
 
 public class EventBusManager implements IEventBusManager {
 
 	private static final Logger logger = LoggerFactory.getLogger(EventBusManager.class);
-
-	private static final int EXECUOTRS_SIZE = Runtime.getRuntime().availableProcessors();
-
-	private ExecutorService[] executors;
 
 	private Map<Class<? extends IEvent>, List<IReceiverInvoke>> ReceiverDefintionMap = new HashMap<Class<? extends IEvent>, List<IReceiverInvoke>>();
 
@@ -32,10 +28,6 @@ public class EventBusManager implements IEventBusManager {
 	}
 
 	private synchronized void init() {
-		executors = new ExecutorService[EXECUOTRS_SIZE];
-		for (int i = 0; i < EXECUOTRS_SIZE; i++) {
-			executors[i] = Executors.newSingleThreadExecutor();
-		}
 		self = this;
 	}
 
@@ -43,16 +35,24 @@ public class EventBusManager implements IEventBusManager {
 		return self;
 	}
 
-	public void syncSubmit(final IEvent event) {
-		doSubmitEvent(event);
-	}
+	public void submit(final IEvent event, final String eventName, final int dispatharCode) {
+		IdentityEventExecutorGroup.addTask(new AbstractDispatcherHashCodeRunable() {
 
-	public void submit(final IEvent event) {
-		executors[Math.abs((int) (event.getOwner() % EXECUOTRS_SIZE))].submit(new Runnable() {
 			@Override
-			public void run() {
+			public int getDispatcherHashCode() {
+				return dispatharCode;
+			}
+
+			@Override
+			public String name() {
+				return eventName;
+			}
+
+			@Override
+			protected void doRun() {
 				doSubmitEvent(event);
 			}
+
 		});
 	}
 

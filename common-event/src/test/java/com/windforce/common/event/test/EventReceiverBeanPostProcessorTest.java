@@ -14,7 +14,7 @@ public class EventReceiverBeanPostProcessorTest {
 	@Test
 	public void test() {
 		for (int i = 0; i < 1000; i++) {
-			EventBusManager.getInstance().submit(new TestEvent());
+			EventBusManager.getInstance().submit(new TestEvent(), "test", 1);
 		}
 		synchronized (this) {
 			try {
